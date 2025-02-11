@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I love you</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="assets/heart.png" rel="shortcut icon" type="image/x-icon" />
+    <style>
+        body {
+            background-color: #efefef;
+            font-family: "Dancing Script", serif;
+        }
+
+        .img1,
+        .img2 {
+            object-fit: contain;
+            width: 40%;
+        }
+
+        .img2 {
+            transform: rotate(10deg);
+        }
+
+        .imgs-container {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .dancing-script {
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-size: 100px;
+            color: rgb(239, 83, 109);
+        }
+
+        .wishes {
+            width: 100%;
+            text-align: center;
+        }
+
+        span {
+            position: absolute;
+            pointer-events: none;
+            filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+            animation: fadeInOut 1s linear infinite;
+        }
+
+        @keyframes fadeInOut {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            20%,
+            80% {
+                opacity: 1;
+            }
+        }
+
+        span::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url(assets/heart.png);
+            background-size: cover;
+            animation: moveShape 1s linear infinite;
+        }
+
+        @keyframes moveShape {
+            0% {
+                transform: translate(0) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(300px) rotate(360deg);
+            }
+        }
+
+        .content {
+            /* background-color: #191b20; */
+            margin-top: 100px;
+            padding: 100px;
+            font-size: 40px;
+            /* color: white; */
+            background-image: url(assets/pngwing.com.png);
+        }
+    </style>
+    <script>
+        document.addEventListener('mousemove', function (e) {
+            let page = document.getElementsByClassName('page')[0];
+            let heart = document.createElement('span');
+            let x = e.offsetX;
+            let y = e.offsetY;
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
+
+            let size = Math.random() * 80;
+            heart.style.width = 20 + size + 'px';
+            heart.style.height = 20 + size + 'px';
+
+            let transformValue = Math.random() * 360;
+            heart.style.transform = `rotate(${transformValue}deg)`;
+
+            page.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 1000);
+        })
+    </script>
+</head>
+
+<body>
+    <div class="page">
+        <div class="imgs-container">
+            <img class="img1" src="assets/undraw_couple-love_32ys.svg" />
+            <img class="img2" src="assets/undraw_true-love.svg" />
+        </div>
+        <div class="wishes">
+            <p class="dancing-script">Happy Valentines Day Laya</p>
+        </div>
+    </div>
+    <div class="content">
+        My Dear Laya,<br>
+        I'm not very thoughtful or creative like you, but I know how much gestures mean to you, so I decided to do something I'm not bad at 😅😅
+
+        <br><br>
+        It's only been a month since I met you, and yet we've become so close 😮. I never thought I'd be able to love someone so much in so less time.
+        The first time I texted you and got to know you, you seemed amazing. The first time I talked to you, and you told me some of the things you
+        faced and are facing in life, I wanted to take care of you and treat you the way you deserved. You're really amazing. <br>You have so much pain
+        inside and yet you're the 🔆 brightest 🔆face on the outside, bringing joy to everyone around you. And for that, I can't tell you how much I respect
+        you. You're incredibly talented and can achieve anything 🥇you set your mind on. You've taken such good care of me, like my mother would have if 
+        she was still here. I'm sure she would have loved you 💜   <br><br>All the moments we've spent together over the past few weeks feel so surreal 😲. <br> 
+        I love the way you talk 🗣, the way you smile 😊, the way you sing 🎶, the way you're so matured, and yet so childish when you're with me.
+        I really love that and I hope it never changes. I love your eyes 👀, I love how cute you are 🩵, even when you're angry 😤. <br>
+        I'll do everything I can to take such good care of you that you'll forget all your worries and be happy and peaceful with me 😇.
+        I know I'm not very expressive 😶 and may not always show it, but I really love you. 
+        If you ask how much, I'd say I love you less than tomorrow 💕💕. 
+        Please know that you're not alone anymore and I'm here for you, whatever you need. 
+        I don't really care about the concept of valentines day because you're special to me every single day. But since it means something to you,
+        here I am trying to do something, not even sure what I'm doing lol😅. So please don't hate me even if this ends up looking like shit 🥹.
+        You came into my depressed and hopeless life and brought in so much of light and happiness. I can never thank you enough for that.
+        I hope we stay together in our journey moving forward and that we'll stand side by side, holding each others hands 👫.
+        <br>With lots of love, your Vardhana.
+    </div>
+</body>
+
+</html>
