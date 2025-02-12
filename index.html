@@ -10,6 +10,90 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link href="assets/heart.png" rel="shortcut icon" type="image/x-icon" />
     <style>
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .hearts {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .hearts img {
+            position: absolute;
+            /* width: 80px;
+            height: auto; */
+            object-fit: contain;
+            width: 100px;
+            bottom: -250px;
+            user-select: none;
+            cursor: grab;
+            animation: flying 8s linear infinite;
+        }
+
+        .hearts img:nth-child(1) {
+            left: 25%;
+            animation-delay: 0s;
+        }
+        
+        .hearts img:nth-child(2) {
+            left: 85%;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+        
+        .hearts img:nth-child(3) {
+            left: 10%;
+            animation-delay: 4s;
+        }
+        
+        .hearts img:nth-child(4) {
+            left: 70%;
+            animation-delay: 0s;
+            animation-duration: 18s;
+        }
+        
+        .hearts img:nth-child(5) {
+            left: 65%;
+            animation-delay: 0s;
+        }
+        
+        .hearts img:nth-child(6) {
+            left: 35%;
+            animation-delay: 3s;
+        }
+
+        .hearts img:nth-child(7) {
+            left: 90%;
+            animation-delay: 4s;
+            animation-duration: 12s;
+        }
+
+        
+        .hearts img:nth-child(8) {
+            left: 40%;
+            animation-delay: 8s;
+            animation-duration: 15s;
+        }
+
+        @keyframes flying {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-1000px);
+            }
+        }
+
+
         body {
             background-color: #efefef;
             font-family: "Dancing Script", serif;
@@ -86,15 +170,13 @@
         }
 
         .content {
-            /* background-color: #191b20; */
             margin-top: 100px;
             padding: 100px;
             font-size: 40px;
-            /* color: white; */
             background-image: url(assets/pngwing.com.png);
         }
     </style>
-    <script>
+    <!-- <script>
         document.addEventListener('mousemove', function (e) {
             let page = document.getElementsByClassName('page')[0];
             let heart = document.createElement('span');
@@ -116,7 +198,7 @@
                 heart.remove();
             }, 1000);
         })
-    </script>
+    </script> -->
 </head>
 
 <body>
@@ -141,6 +223,7 @@
         she was still here. I'm sure she would have loved you 💜   <br><br>All the moments we've spent together over the past few weeks feel so surreal 😲. <br> 
         I love the way you talk 🗣, the way you smile 😊, the way you sing 🎶, the way you're so matured, and yet so childish 👶🏻 when you're with me.
         I really love that and I hope it never changes. I love your eyes 👀, I love how cute you are 🩵, even when you're angry 😤. <br>
+        They say nobody is perfect. And yet, when I look at you, all I see is perfection.
         I'll do everything I can to take such good care of you that you'll forget all your worries and be happy and peaceful with me 😇.
         I know I'm not very expressive 😶 and may not always show it, but I really love you. 
         If you ask how much, I'd say I love you less than tomorrow 💕💕. 
@@ -151,6 +234,19 @@
         I hope we stay together in our journey moving forward and that we'll stand side by side, holding each others hands 👫.
         <br>With lots of love, your Vardhana.
     </div>
+    <div class="hearts">
+        <img src="assets/heart.png" alt="h1">
+        <img src="assets/heart.png" alt="h2">
+        <img src="assets/heart.png" alt="h3">
+        <img src="assets/heart.png" alt="h4">
+        <img src="assets/heart.png" alt="h5">
+        <img src="assets/heart.png" alt="h6">
+        <img src="assets/heart.png" alt="h7">
+        <img src="assets/heart.png" alt="h8">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="/index.js"></script>
 </body>
 
 </html>
